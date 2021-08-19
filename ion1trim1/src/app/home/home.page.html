@@ -23,6 +23,12 @@
     </ion-item>
     <ion-item>
       <ion-label position="floating">
+        Login
+      </ion-label>
+      <ion-input [(ngModel)]="login"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
         Senha
       </ion-label>
       <ion-input [(ngModel)]="senha"></ion-input>
@@ -31,6 +37,15 @@
       <ion-button size="Medium" expand="block">
         Entrar
       </ion-button>
+      <ion-item>
+        <ion-label position="floating">
+          Mensagem
+        </ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+    </div>
+    <div>
+      {{ nome }} {{sobrenome}}
     </div>
   </div>
   </ion-content>

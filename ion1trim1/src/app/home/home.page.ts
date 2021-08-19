@@ -8,7 +8,9 @@ import { Component } from '@angular/core';
 export class HomePage {
   nome: string = ''
   sobrenome: string = ''
+  login: string = ''
   senha: string = ''
+  mensagem: string = ''
   constructor() {}
 
 }
