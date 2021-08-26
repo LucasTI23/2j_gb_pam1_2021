@@ -6,11 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  nome: string = ''
-  sobrenome: string = ''
-  login: string = ''
-  senha: string = ''
-  mensagem: string = ''
+  selecoes = [
+    'brasil.png',
+    'frança.jpg',
+    'portugal.png',
+    'argentina.jpg'
+  ];
+  selecao = 'inicio.jpg';
+
   constructor() {}
 
 }
