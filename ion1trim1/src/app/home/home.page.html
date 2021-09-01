@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-     QUAL SELECAO?
+  <ion-title expand="block">
+     QUAL   COMBUSTIVEL?
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,19 +9,23 @@
 <ion-content [fullscreen]="true">
 
   <div id="container">
-    <ion-img src="assets/selecoes/{{ selecao }}">
-    </ion-img>
+      <ion-img src="assets/{{ usuario }}"></ion-img>
+    
+
     <div>
-      <ion-button expand="block" color="primary">Brasil</ion-button>
+      <ion-item>
+        <ion-label position="floating">Preço da Gasolina</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Preço do Etanol</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
     </div>
-    <div>
-      <ion-button expand="block" color="secondary">França</ion-button>
-    </div>
-    <div>
-      <ion-button expand="block" color="danger">Portugal</ion-button>
-    </div>
-    <div>
-      <ion-button expand="block" color="warning">Argentina</ion-button>
+      
+    <div id="btn">
+      <ion-button expand="block">Verificar</ion-button>
     </div>
   </div>
-  </ion-content>
+</ion-content>

@@ -6,13 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  selecoes = [
-    'brasil.png',
-    'frança.jpg',
-    'portugal.png',
-    'argentina.jpg'
-  ];
-  selecao = 'inicio.jpg';
+    usuario = 'gasoline-pump.png'
 
   constructor() {}
 
