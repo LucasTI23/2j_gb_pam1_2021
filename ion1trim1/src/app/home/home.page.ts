@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
     usuario = 'gasoline-pump.png'
-
+    
   constructor() {}
 
 }
