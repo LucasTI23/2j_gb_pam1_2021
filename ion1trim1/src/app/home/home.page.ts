@@ -6,8 +6,28 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-    usuario = 'gasoline-pump.png'
-    
+    imagens = [
+      'inicio.jpeg',
+      'etanol.jpg',
+      'gasolina.jpg',
+      'tantofaz.jpg'
+    ];
+    imagem = this.imagem[0];
+    gasolina = null;
+    etanol = null;
+
   constructor() {}
+
+  verificar(): void{
+    let resp = this.etanol / this.gasolina;
+
+    if(resp < 0.7){
+      this.imagem = this.imagens[1];
+    }else if(resp > 0.7){
+      this.imagem = this.imagens[2];
+    }else{
+      this.imagem = this.imagens[3];
+    }
+  }
 
 }

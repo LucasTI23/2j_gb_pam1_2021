@@ -9,25 +9,34 @@
 <ion-content [fullscreen]="true">
 
   <div id="container">
-      <ion-img src="assets/{{ usuario }}"></ion-img>
-    
+    <div>
+      <ion-img id="imgTopo" src="assets/combustivel/gasoline-pump.png"></ion-img>
+    </div>
 
     <div>
       <br>
       <br>
       <ion-item>
-        <ion-label type="block">Preço da Gasolina</ion-label>
-        <ion-input></ion-input>
+        <ion-label position="floating">Preço da Gasolina</ion-label>
+        <ion-input type="number" [(ngModel)] = gasolina></ion-input>
       </ion-item>
       <br>
       <ion-item>
         <ion-label position="floating">Preço do Etanol</ion-label>
-        <ion-input></ion-input>
+        <ion-input type="number" [(ngModel)] = etanol></ion-input>
       </ion-item>
     </div>
-      
+  
     <div id="btn">
       <ion-button expand="block">Verificar</ion-button>
+    </div>
+
+    <div id="btnReset">
+      <ion-button color="danger" expand="block">Reset</ion-button>
+    </div>
+
+    <div>
+      <ion-img id="imgFoot" src="assets/combustivel/{{ imagem }}"></ion-img>
     </div>
   </div>
 </ion-content>
