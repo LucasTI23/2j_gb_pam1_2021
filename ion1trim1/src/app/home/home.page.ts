@@ -12,7 +12,7 @@ export class HomePage {
       'gasolina.jpg',
       'tantofaz.jpg'
     ];
-    imagem = this.imagem[0];
+    imagem = this.imagens[0];
     gasolina = null;
     etanol = null;
 
