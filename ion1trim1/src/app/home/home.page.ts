@@ -30,4 +30,9 @@ export class HomePage {
     }
   }
 
+  limpar(): void{
+    this.imagem = this.imagens[0];
+    this.etanol = null;
+    this.gasolina = null;
+  }
 }
