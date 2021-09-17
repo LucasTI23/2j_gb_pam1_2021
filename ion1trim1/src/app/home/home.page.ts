@@ -6,33 +6,39 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-    imagens = [
-      'inicio.jpeg',
-      'etanol.jpg',
-      'gasolina.jpg',
-      'tantofaz.jpg'
+    prjRevisao = [
+      'topo.jpg',
+      'crianca.jpg',
+      'jovem.jpg',
+      'adulto.jpg',
+      'idoso.jpg',
+      'erro.jpg'
     ];
-    imagem = this.imagens[0];
-    gasolina = null;
-    etanol = null;
+    imagem = this.prjRevisao[0];
+    nome = null;
+    idade = null;
 
   constructor() {}
 
   verificar(): void{
-    let resp = this.etanol / this.gasolina;
+    let resp = this.idade;
 
-    if(resp < 0.7){
-      this.imagem = this.imagens[1];
-    }else if(resp > 0.7){
-      this.imagem = this.imagens[2];
-    }else{
-      this.imagem = this.imagens[3];
+    if(resp >= 1 || resp <=10){
+      this.imagem = this.prjRevisao[1];
+    }else if(resp >= 11 || resp <=25){
+      this.imagem = this.prjRevisao[2];
+    }else if(resp >=26 || resp<=59){
+      this.imagem = this.prjRevisao[3];
+    }else if(resp >=60 || resp <=110){
+      this.imagem = this.prjRevisao[4];
+    }else {
+      this.imagem = this.prjRevisao[5];
     }
   }
 
   limpar(): void{
-    this.imagem = this.imagens[0];
-    this.etanol = null;
-    this.gasolina = null;
+    this.imagem = this.prjRevisao[0];
+    this.idade = null;
+    this.nome = null;
   }
 }

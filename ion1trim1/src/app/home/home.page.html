@@ -1,42 +1,37 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
   <ion-title expand="block">
-     QUAL   COMBUSTIVEL?
+     AGE'S LEVEL
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
 
+  <div>
+    <ion-item>
+      <ion-label position="floating">Digite seu Nome</ion-label>
+      <ion-input type="string" [(ngModel)] = nome></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-label position="floating">Digite sua Idade</ion-label>
+      <ion-input type="number" [(ngModel)] = idade></ion-input>
+    </ion-item>
+  </div>
+
+  <div id="btn">
+    <ion-button expand="block" (click)="verificar()">Verificar</ion-button>
+  </div>
+
   <div id="container">
     <div>
-      <ion-img id="imgTopo" src="assets/combustivel/gasoline-pump.png"></ion-img>
+      <ion-img id="imgTopo" src="assets/prjRevisao/{{ imagem }}"></ion-img>
     </div>
-
-    <div>
-      <br>
-      <br>
-      <ion-item>
-        <ion-label position="floating">Preço da Gasolina</ion-label>
-        <ion-input type="number" [(ngModel)] = gasolina></ion-input>
-      </ion-item>
-      <br>
-      <ion-item>
-        <ion-label position="floating">Preço do Etanol</ion-label>
-        <ion-input type="number" [(ngModel)] = etanol></ion-input>
-      </ion-item>
-    </div>
-  
-    <div id="btn">
-      <ion-button expand="block" (click)="verificar()">Verificar</ion-button>
-    </div>
-
+    
     <div id="btnReset">
       <ion-button color="danger" expand="block" (click)="limpar()">Reset</ion-button>
     </div>
 
-    <div>
-      <ion-img id="imgFoot" src="assets/combustivel/{{ imagem }}"></ion-img>
-    </div>
   </div>
 </ion-content>
